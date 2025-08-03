@@ -1,6 +1,6 @@
 from fastmcp import FastMCP
 
-mcp = FastMCP(name="Machine")
+mcp = FastMCP(name="Kortix")
 
 
 @mcp.tool

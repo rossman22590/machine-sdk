@@ -1,38 +1,38 @@
-# machine SDK
+# Machine SDK
 
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://python.org)
 
-A Python SDK that enables you to create, manage, and interact with AI agents on machine platform.
+A Python SDK that enables you to create, manage, and interact with AI agents on [Suna](https://suna.so).
 
 ## 📦 Installation
 
 Install directly from the GitHub repository:
 
 ```bash
-pip install "machine @ git+https://github.com/machine-ai/sdk.git"
+pip install "machine-sdk @ git+https://github.com/rossman22590/machine-sdk.git@main#subdirectory=sdk"
 ```
 
 Or using uv:
 
 ```bash
-uv add "machine @ git+https://github.com/machine-ai/sdk.git"
+uv add "machine-sdk @ git+https://github.com/rossman22590/machine-sdk.git@main#subdirectory=sdk"
 ```
 
 ## 🔧 Quick Start
 
 ```python
 import asyncio
-from machine import Machine
+from Machine import Machine
 
 async def main():
     mcp_tools = Machine.MCPTools(
         "http://localhost:4000/mcp/",  # Point to any HTTP MCP server
-        "machine",
+        "Machine",
     )
     await mcp_tools.initialize()
 
     # Initialize the client
-    client = Machine(api_key="your-api-key")
+    client = Machine.Machine(api_key="your-api-key")
 
     # Create an agent
     agent = await client.Agent.create(
@@ -59,7 +59,7 @@ if __name__ == "__main__":
 
 ## 🔑 Environment Setup
 
-Get your API key from [https://suna.so/settings/api-keys](https://suna.so/settings/api-keys)
+Get your API key from [https://machine.myapps.ai/settings/api-keys](https://machine.myapps.ai/settings/api-keys)
 
 ## 🧪 Running Examples
 

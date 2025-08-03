@@ -1,12 +1,12 @@
 """
-machine SDK for machine AI Agent Platform
+Kortix SDK for Suna AI Agent Platform
 
 A Python SDK for creating and managing AI agents with thread execution capabilities.
 """
 
 __version__ = "0.1.0"
 
-from .machine.machine import Machine
-from .machine.tools import AgentPressTools, MCPTools
+from .kortix.kortix import Kortix
+from .kortix.tools import AgentPressTools, MCPTools
 
-__all__ = ["Machine", "AgentPressTools", "MCPTools"]
+__all__ = ["Kortix", "AgentPressTools", "MCPTools"]
